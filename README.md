@@ -20,15 +20,29 @@ tanzu plugin install workload
 
 ### Log into the JeffA2 TMC Org for the Workshop
 
-1. Create an API token in your TMC profile.
+1. Change Your Organization to Jeffa2
 
-2. Create a new context for the workshop using the jeffa2org endpoint:
+![profile](/images/profile.png)
+
+2. Create an API token in your TMC profile.
+
+![token](/images/api-token.png)
+
+3. Create a new context for the workshop using the jeffa2org endpoint:
 ```
 tanzu context create supplychain-workshop --endpoint jeffa2org.tmc.cloud.vmware.com
 ```
 
-3. Grab the Kubeconfig from TMC for the 
+4. From TMC, grab the Kubeconfig from TMC for the cluster `supply-chain-workshop` and merge it into your .kube/config.
 
+![config](/images/kubeconfig.png)
+
+
+5. Verify you have access to the namespaces:
+
+```
+kubectl get ns
+```
 
 ### Understanding Supply Chain 2.0
 
